@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/NeworkManagerScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/RemoteActionScene.unity
+    guid: 588d597412bf1254ba8ff790c04db04f
   m_configObjects: {}
