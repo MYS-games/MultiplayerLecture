@@ -15,6 +15,8 @@ public class RemoteActionsPlayer : NetworkBehaviour
     [SyncVar(hook = nameof(HandleColorOnUI))]
     [SerializeField] Color playerColor = Color.gray;
 
+    #region Server
+
     [Server]
     public void SetName(string newName)
     {
@@ -27,6 +29,20 @@ public class RemoteActionsPlayer : NetworkBehaviour
         playerColor = newColor;
     }
 
+    [Command]
+    private void CmdSetName(string newName)
+    {
+        if(newName.Length < 1 || newName.Length > 8) { return; }
+
+        RpcLogToAllClients(newName);
+
+        SetName(newName);
+    }
+
+    #endregion
+
+    #region Client
+
     private void HandleTextOnUI(string _, string newName)
     {
         nameText.text = newName;
@@ -37,4 +53,16 @@ public class RemoteActionsPlayer : NetworkBehaviour
         playerRenderer.material.SetColor("_BaseColor", newColor);
     }
 
+    public void TrySetNameByClient(string newName)
+    {
+        CmdSetName(newName);
+    }
+
+    [ClientRpc]
+    private void RpcLogToAllClients(string newName)
+    {
+        Debug.Log($"One of the players changed his name to {newName}");
+    }
+
+    #endregion
 }

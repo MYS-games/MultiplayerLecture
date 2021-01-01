@@ -18,6 +18,12 @@ public class RemoteActionsNetworkManaget : NetworkManager
         myPlayer.SetName($"Player {numPlayers}");
         myPlayer.SetColor(numPlayers == 1 ? Color.black : Color.white);
 
+    }
+
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+        base.OnClientConnect(conn);
+
         changeNameButton.SetActive(true);
     }
 }
