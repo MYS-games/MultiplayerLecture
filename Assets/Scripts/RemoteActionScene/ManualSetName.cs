@@ -6,13 +6,17 @@ using UnityEngine;
 
 public class ManualSetName : MonoBehaviour
 {
-    [SerializeField] TMP_InputField selectedName = null;
     
-    public void setname()
+    
+    public void setname(TMP_InputField newName)
     {
-        string myNewName = selectedName.text;
-        RemoteActionsPlayer myPlayer = FindObjectOfType<RemoteActionsPlayer>();
+        RemoteActionsPlayer[] myPlayer = FindObjectsOfType<RemoteActionsPlayer>();
+        Debug.Log(myPlayer.Length);
 
-        myPlayer.TrySetNameByClient(myNewName);
+        foreach(RemoteActionsPlayer p in myPlayer)
+        {
+            p.TrySetNameByClient(newName.text);
+        }
+       // myPlayer.TrySetNameByClient(newName.text);
     }
 }

@@ -16,6 +16,6 @@ public class CustomNetworkManager : NetworkManager
     {
         base.OnServerAddPlayer(conn);
 
-        Debug.Log($"there is {numPlayers} connected");
+        Debug.Log($"there are {numPlayers} players connected");
     }
 }

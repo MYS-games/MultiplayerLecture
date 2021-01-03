@@ -346,7 +346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20f099fa2b8ce14fbae4ee53cc2da6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedName: {fileID: 1142347101}
 --- !u!1 &590618329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,10 +2018,10 @@ MonoBehaviour:
       - m_Target: {fileID: 587195697}
         m_TargetAssemblyTypeName: ManualSetName, Assembly-CSharp
         m_MethodName: setname
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1142347101}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_InputField, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2152,7 +2151,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.68e-43, y: NaN, z: 4.68e-43, w: 2.7223537e+20}
+  m_BoundingSphereOverride: {x: 0, y: -2.3169634e-26, z: 4.5904e-41, w: 0.000000005060297}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

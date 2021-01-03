@@ -104,9 +104,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8692608753690950939}
-  - component: {fileID: -8936878994236762650}
+  - component: {fileID: 6488952378990960352}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerLog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8936878994236762650
+--- !u!114 &6488952378990960352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
